@@ -10,7 +10,7 @@ function App() {
 		const isWhatTimeEvent = (e) => {
 			return e.data.event && e.data.event.indexOf('whattime') === 0;
 		}
-		// https://help.whattime.co.kr/2b01e93e-1961-4dd6-adf4-a6673909e634#69b2f8e0-81e1-46e8-a9bd-024423ae51f4
+		// https://guide.whattime.co.kr/help/getting-started/share/embed/dev#listen_event
 		window.addEventListener('message', function (e) {
 			if (isWhatTimeEvent(e)) {
 				console.log("Event Name :", e.data.event);
