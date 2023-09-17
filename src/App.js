@@ -1,7 +1,7 @@
 import './App.css';
 import {useEffect} from "react";
 
-const SAMPLE_CODE = 'dH2zvP4wxp';
+const SAMPLE_URL = 'https://whattime.co.kr/jay/interview';
 
 function App() {
 	useEffect(() => {
@@ -21,14 +21,14 @@ function App() {
 
 	const onClick = () => {
 		window.WhatTime.initPopupWidget({
-			code: SAMPLE_CODE,
+			url: SAMPLE_URL,
 		})
 	}
 
 	return (
 		<div className="App">
 			<button onClick={onClick}>팝업 열기</button>
-			<div className="whattime-inline-widget" data-code={SAMPLE_CODE} style={{minWidth: "320px", height: "660px"}}/>
+			<div className="whattime-inline-widget" data-url={SAMPLE_URL} style={{minWidth: "320px", height: "660px"}}/>
 		</div>
 	);
 }
